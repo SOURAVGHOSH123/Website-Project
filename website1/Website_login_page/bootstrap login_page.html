@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Responsive Login, Registration & Forgot Form Design</title>
+
+    <!-- Bootstrap 4 CSS CDN -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <!-- Fontawesome CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripot.js"></script>
+</head>
+
+<body>
+    <div class="container-md">
+
+        <!-- Login Form Start -->
+        <div class="row justify-content-center wrapper" id="login-box" style="display: none;">
+            <div class="offset-3 col-lg-10 my-auto myShadow">
+              <div class="row">
+                <div class="col-lg-7 bg-white p-4">
+                  <h1 class="text-center font-weight-bold text-primary">Sign in to Account</h1>
+                  <hr class="my-3" />
+                  <form action="#" method="post" class="px-3" id="login-form">
+                    <div class="input-group input-group-lg form-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text rounded-0">
+                            <i class="far fa-envelope fa-lg fa-fw"></i></span>
+                      </div>
+                      <input type="email" id="email" name="email" class="form-control rounded-0" placeholder="E-Mail" required />
+                    </div>
+                    <div class="input-group input-group-lg form-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text rounded-0">
+                            <i class="fas fa-key fa-lg fa-fw"></i></span>
+                      </div>
+                      <input type="password" id="password" name="password" class="form-control rounded-0" minlength="5" placeholder="Password" required autocomplete="off" />
+                    </div>
+                    <div class="form-group ">
+                      <div class="custom-control custom-checkbox float-left">
+                        <input type="checkbox" class="custom-control-input" id="customCheck" name="rem" />
+                        <label class="custom-control-label" for="customCheck">Remember me</label>
+                      </div>
+                      <div class="forgot float-right">
+                        <a href="#forgot-box" id="forgot-link">Forgot Password?</a>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button id="login-link" value="Log In" class="btn btn-primary btn-lg btn-block myBtn">Log In </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>    
+      
+        
+        <!-- Login Form End -->
+        <!-- Registration Form Start -->
+        <div class="row justify-content-center m-4" id="register-box">
+            <div class="col-lg-10 my-auto ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg d-flex flex-column justify-content-center myColor p-4">
+                            <h1 class="text-center font-weight-bold text-white">Welcome To Website!</h1>
+                            <hr class="my-4 bg-light myHr" />
+                            <p class="text-center font-weight-bolder text-light lead">To keep connected with us please login
+                                with your personal info.</p>
+                            <!-- <button class="btn btn-outline-light btn-lg font-weight-bolder mt-4 align-self-center myLinkBtn"
+                                id="login-link">Sign In</button> -->
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="offset-3 col-lg-7 bg-white p-4">
+                        <h1 class="text-center font-weight-bold text-primary">Create Your Account</h1>
+                        <hr class="my-3" />
+                        <form action="#" method="post" class="px-3" id="register-form">
+                            <div class="input-group input-group-lg form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text rounded-0">
+                                        <i class="far fa-user fa-lg fa-fw"></i></span>
+                                </div>
+                                <input type="text" id="name" name="name" class="form-control rounded-0"
+                                    placeholder="Full Name" required />
+                            </div>
+                            <div class="input-group input-group-lg form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text rounded-0"><i
+                                            class="far fa-envelope fa-lg fa-fw"></i></span>
+                                </div>
+                                <input type="email" id="remail" name="email" class="form-control rounded-0"
+                                    placeholder="E-Mail" required />
+                            </div>
+                            <div class="input-group input-group-lg form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text rounded-0">
+                                        <i class="fas fa-key fa-lg fa-fw"></i></span>
+                                </div>
+                                <input type="password" id="rpassword" name="password" class="form-control rounded-0"
+                                    minlength="5" placeholder="Password" required />
+                            </div>
+                            <div class="input-group input-group-lg form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text rounded-0"><i
+                                            class="fas fa-key fa-lg fa-fw"></i></span>
+                                </div>
+
+                                <input type="password" id="cpassword" name="cpassword" class="form-control rounded-0"
+                                    minlength="5" placeholder="Confirm Password" required />
+                            </div>
+                            <div class="form-group">
+                                <div id="passError" class="text-danger font-weight-bolder"></div>
+                            </div>
+                            <div class="form-group"> 
+                                <input type="submit" id="register-link" value="Sign Up"
+                                    class="btn btn-primary btn-lg btn-block myBtn" /><br>
+
+                                <p class="container-fluid text-center">------------------OR-----------------</p>
+                               
+                                <button id="login-btn" class="btn btn-primary btn-lg btn-block myBtn">
+                                    <a href="#login-box" style="text-decoration: none; color: aliceblue;"> Log In </a>
+                                </button>
+                            </div>
+                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration Form End -->
+    <!-- Forgot Password Form Start -->
+    <div class="row justify-content-center wrapper" id="forgot-box" style="display:none;">
+        <div class="col-lg-10 my-auto myShadow">
+            <div class="row">
+                <div class="col-lg-7 bg-white p-4">
+                    <h1 class="text-center font-weight-bold text-primary">Forgot Your Password?</h1>
+                    <hr class="my-3" />
+                    <p class="lead text-center text-secondary">To reset your password, enter the privious                      
+                        password and reset your password!</p>
+                    <form action="#" method="post" class="px-3" id="forgot-form">
+                        <div id="forgotAlert"></div>
+                        <div class="input-group input-group-lg form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text rounded-0">
+                                    <i class="fas fa-key fa-lg fa-fw"></i></span>
+                            </div>
+                            <input type="password" id="qpassword" name="Password" class="form-control rounded-0"
+                                placeholder="previous password" required />
+                        </div>
+                        <div class="input-group input-group-lg form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text rounded-0">
+                                    <i class="fas fa-key fa-lg fa-fw"></i></span>
+                            </div>
+                            <input type="password" id="zpassword" name="Password" class="form-control rounded-0"
+                                placeholder="enter new password" required />
+                        </div>
+                        <div class="input-group input-group-lg form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text rounded-0">
+                                    <i class="fas fa-key fa-lg fa-fw"></i></span>
+                            </div>
+                            <input type="password" id="gpassword" name="Password" class="form-control rounded-0"
+                                placeholder="confirm New password" required />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" id="forgot-btn" value="Reset Password"
+                                class="btn btn-primary btn-lg btn-block myBtn" />
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-5 d-flex flex-column justify-content-center myColor p-4">
+                    <h1 class="text-center font-weight-bold text-white">Try to Log in</h1>
+                    <hr class="my-4 bg-light myHr" />
+                    <button class="btn btn-outline-light btn-lg font-weight-bolder myLinkBtn align-self-center"
+                        id="back-link">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forgot Password Form End -->
+    </div>
+</body>
+</html>

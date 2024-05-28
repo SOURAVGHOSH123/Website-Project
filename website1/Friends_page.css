@@ -1,0 +1,40 @@
+#friends{
+      margin-left: 330px;
+      margin-top: 100px;
+      padding: 6px;
+      background-color: white;
+}
+.row{
+   /* flex-direction: column; */
+   margin-bottom: 10px;
+}
+.row p{
+   font-size: 23px;
+   font-weight: bold;
+   text-align: left;
+}
+#per_friend{
+   display: inline-block;
+   border: 1px solid black;
+   width: 280px;
+   height: 400px;
+   padding: 10px;
+}
+.row a{
+   text-decoration: none;
+}
+.button{
+   width: 275px;
+   display: inline;
+   margin-bottom: 6px;
+   padding: 10px;
+   border: 1px solid skyblue;
+   background-color: aqua;
+   text-align: center;
+}
+img{
+   width: 250px;
+   height: 250px;
+   text-align: center;
+   padding: 0px 15px;
+}

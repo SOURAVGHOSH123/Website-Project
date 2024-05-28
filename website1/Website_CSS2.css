@@ -1,0 +1,210 @@
+body {
+   scroll-behavior: smooth;
+   font-family: Arial, sans-serif;
+   transition: background-color 0.3s ease;
+   background-color: #aac2e6;
+   margin: 0;
+   padding: 0;
+   flex-direction: column;
+   align-items: center;
+   height: 100vh;           
+}
+#ALLContents{
+   
+   background-color: #ccc;
+   transition: background-color 0.3s ease;
+}
+.topnav {
+   margin: 0px;
+   opacity: 1;
+   z-index: 100;
+   background-color: white;
+   position: fixed;
+   width: 100%;
+   flex: 10;
+   padding: 10px 12px;
+   color: rgb(59, 52, 52);
+   align-items: center;
+}
+.navpart-1{
+   margin-left: 2%;
+}
+.navpart-2{
+   float:right;
+   padding-right: 25px;
+}
+.topnav a {
+   padding-left: 20px;
+   text-align: center;
+   color: #262222;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 27px;
+}
+.topnav input{
+   border: none;
+   background-color: #ccc;
+}
+.topnav a:hover {
+   /* position: fixed; */
+   background-color: #1ae36b;
+   color: rgb(56, 22, 158);
+}
+
+.topnav a.active {
+   /* background-color: #d4ddd9;  */
+   color: rgb(46, 41, 41);
+   border-bottom: 2px solid blue;
+   position: fixed;
+}
+.topnav .search span {
+   /* float: right; */
+   /* padding: 0px;
+   margin: 0px; */
+   background: #f6f5f5;
+   font-size: 23px;
+   color: black;
+   border: none;
+   height: 40px;
+   width: 40px;
+   cursor: pointer;
+ }
+ .topnav .search span:hover {
+   background: #ccc;
+ }
+ .search{
+   background-color: white;
+   margin: 0px;
+   margin-left: 20%;
+   border: none;
+ }
+#container{
+   position:fixed;
+   float: right;
+   margin-left: 1030px;
+   margin-top: 80px;
+   color: black;
+   font-size: 20px;
+}
+#friends{
+   position:fixed;
+   margin-left: 1100px;
+   margin-top: 400px;
+   font-size: 18px;
+   
+}
+#message{
+   flex: 1;
+   float: right;
+   height: 200px;
+   width: 250px;
+   float: right;
+   margin: 5px;
+}
+#toggleButton{
+   font-size: 24px;
+}
+#toggleButton:hover{
+   color: red;
+   font-size: 24px;
+}
+#side-menu {
+   padding-bottom: 20px;
+   height: 1000px;
+   width: auto;
+   margin: auto;
+   z-index: auto;
+   position: fixed;
+   background-color: whitesmoke;
+   color: black;
+   margin-top: 75px; 
+   flex: 2;
+}
+#side-menu img{
+   border-radius: 20px;
+}
+#ul li{
+   padding: 10px;
+}
+a {
+   text-decoration: none;
+   color: black;
+}
+#ul-toggle:hover{
+   padding: 15px;
+   width: auto;
+   height: 400px;
+   overflow-y: scroll;
+}
+input{
+   height: 30px;
+}
+#content {
+   margin-left: -30px;
+   text-align: center;
+   flex: 100;
+   padding: 8px;
+   }
+
+#button {
+   font-size: 20px;
+   background-color: white;
+   color: black;
+   padding: 10px;
+   text-align: left;
+   width: 600px;
+   margin-left: calc(400px);
+   margin-bottom: 10px;
+   margin-top: 80px;
+   border: 1px solid white;
+}
+#part2,.part3{
+   background-color: white;
+   color: black;
+   padding: 10px;
+   text-align: left;
+   width: 500px;
+   margin-left: 420px;
+   margin-bottom: 10px;
+   margin-top: 10px;
+   border: 1px solid white;
+}
+
+button-container {
+   display: flex;
+   gap: 10px;
+   margin-top: 20px;
+}
+
+.like-Button, .dislike-Button, .share-Button {
+   padding: 3px 2px;
+   cursor: pointer;
+   border: none;
+   border-radius: 15px;
+   transition: background-color 0.3s ease;
+}
+
+.like-Button:hover, .dislike-Button:hover, .share-Button:hover {
+   background-color: #3498db;
+   color: #fff;
+}
+
+.like-Button {
+   background-color: #2ecc71;
+   color: #fff;
+}
+
+.dislike-Button {
+   background-color: #e74c3c;
+   color: #fff;
+}
+button{
+   margin: 5px;
+   text-align: center;
+}
+
+footer {
+   background-color: #f0f2f5;
+   padding: 10px;
+   text-align: center;
+}

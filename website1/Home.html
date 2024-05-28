@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="website_CSS1.css">
+    <link rel="stylesheet" href="Website_CSS2.css">
+    <link rel="stylesheet" href="Website_Model.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Sourav main Page</title>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () { 
+      const Like_Button = document.querySelector(".like-Button");
+      const disLike_Button = document.querySelector(".dislike-Button");
+      const Share_Button = document.querySelector(".share-Button");
+
+      let likeCount = 0;
+      let dislikeCount = 0;
+
+      Like_Button.addEventListener("click", function () {
+          likeCount++;
+          updateCounts();
+      });
+
+      disLike_Button.addEventListener("click", function () {
+          dislikeCount++;
+          updateCounts();
+      });
+
+      Share_Button.addEventListener("click", function () {
+          alert("Shared!");
+      });
+
+      function updateCounts() {
+        Like_Button.innerHTML = `Like (${likeCount})`;
+        disLike_Button.innerHTML = `Dislike (${dislikeCount})`;
+      }
+  });
+  </script>
+  </head>
+  <body>
+   <div id="ALLContents">
+      <div id="container">
+          <p>Group Conversation</p>
+          <textarea id="message" placeholder="Write a message for for your group"></textarea>
+      </div>
+
+      <div id="content">
+          <div id="button">
+              <button><img src="https://t4.ftcdn.net/jpg/03/56/17/75/360_F_356177598_bKRrM01JHWdF2sdABU5brZGTt3FqDqKf.jpg" width="25px" height="25px">
+              <a href="#"</a></button>&nbsp&nbsp
+              create story<br>
+              <p>share a photo or write something</p>
+          </div>
+          <div id="part2">
+              <section>
+                  <img src="https://cdn-icons-png.freepik.com/512/146/146031.png" width="25px" height="25px">&nbsp&nbsp
+              <input type="text" placeholder="what's on your mind sourav"><br>
+              <button type="button" ><a href="#">Live Video</a></button>
+              <button type="button" >Photo/Video</button>
+              <button type="button" >Feeling/Activity</button>
+          </div>
+  
+          <div class ="part3">
+              <img src="https://i0.wp.com/www.iedunote.com/img/23559/what-is-a-company-1.jpg" width="500px" height="400px"><br>
+              <div class="button-container">
+                <button id="likeButton" class="like-Button">Like</button>
+                <button id="dislikeButton" class="dislike-Button">Dislike</button>
+                <button id="shareButton" class="share-Button">Share</button>
+              </div>
+          </div>
+      <br>
+
+          <div class ="part3">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyAzsQ2Wsr832iQA0DZN224HPX3yRI50R1OW5fhLOZ_Q&s"  width="500px" height="400px">
+              <div class="button-container">
+          <button id="likeButton" class="like-Button">Like</button>
+          <button id="dislikeButton" class="dislike-Button">Dislike</button>
+          <button id="shareButton" class="share-Button">Share</button>
+              </div>
+          </div><br>
+  
+         <div class ="part3">
+              <img src="https://t3.ftcdn.net/jpg/04/50/78/40/360_F_450784015_o11Svg8GMfVtj3VRtH7EQpSyzpDlCX24.jpg" width="500px" height="400px"><br>
+              <div class="button-container">
+          <button id="likeButton" class="like-Button">Like</button>
+          <button id="dislikeButton" class="dislike-Button">Dislike</button>
+          <button id="shareButton" class="share-Button">Share</button>
+              </div>
+          </div>
+          <br> 
+          <div class ="part3">
+              <img src="https://cxotoday.com/wp-content/uploads/2022/08/github.jpeg"  width="500px" height="400px"><br>
+              <div class="button-container">
+          <button id="likeButton" class="like-Button">Like</button>
+          <button id="dislikeButton" class="dislike-Button">Dislike</button>
+          <button id="shareButton" class="share-Button">Share</button>
+              </div>
+          </div>
+          <br> 
+          <div class ="part3">
+              <img src="https://i.pinimg.com/originals/81/28/a4/8128a49d5f7b10b38d9aa6dd17544198.gif"  width="500px" height="400px"><br>
+              <div class="button-container">
+          <button id="likeButton" class="like-Button">Like</button>
+          <button id="dislikeButton" class="dislike-Button">Dislike</button>
+          <button id="shareButton" class="share-Button">Share</button>
+              </div>
+          </div>
+          <div class ="part3">
+              <img src="https://i.pinimg.com/originals/c8/ca/70/c8ca70f3e9169546b2c67d301aaeef38.gif"  width="500px" height="400px"><br>
+              <div class="button-container">
+          <button id="likeButton" class="like-Button">Like</button>
+          <button id="dislikeButton" class="dislike-Button">Dislike</button>
+          <button id="shareButton" class="share-Button">Share</button>
+              </div>
+          </div>
+          <div class ="part3">
+              <img src="https://i.pinimg.com/236x/8a/06/11/8a0611bcf6eded85c8989359afd398b5.jpg"  width="500px" height="400px"><br>
+              <div class="button-container">
+          <button id="likeButton" class="like-Button">Like</button>
+          <button id="dislikeButton" class="dislike-Button">Dislike</button>
+          <button id="shareButton" class="share-Button">Share</button>
+              </div>
+          </div>
+  
+  
+          <footer>
+              <p>&copy; 2024 Website Home Page</p>
+          </footer>
+      </div>
+  </div>
+  </body>
+</html>

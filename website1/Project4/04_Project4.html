@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom Learning Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="04_Project4.css">
+    <script src="04_Project4.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+   <div id="gameContent">
+   <header id="header">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+   </header><br><br><br>
+   <div class="wrapper">
+      <h1>Number Guessing Game</h1>
+      <p>Try and guess a random number between 1 to 100.</p>
+      <p>You have 10 attemps to guess the right number.</p>
+   </div><br>
+   <form class="form"> 
+      <label for="guessfield" id="guess">Guess a Numbe</label><br>
+      <input type="text" id="guessfield" class="guessfield" maxlength="6"><br><br>
+      <input type="submit" id="submit" class="guessSubmit" value="submit  guess"
+   </form>
+
+   <div class="resultPress">
+      <p>Previous Guess: 
+         <span class="guesses"></span>
+      </p>
+      <p>Guessses Remaining: 
+         <span class="lastResult">10</span>
+      </p>
+      <p class="LowOrHigh"></p>
+   </div>
+</div>
+</body>
+
+</html>

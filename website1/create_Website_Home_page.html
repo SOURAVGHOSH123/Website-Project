@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="website_CSS1.css">
+    <link rel="stylesheet" href="Website_CSS2.css">
+    <link rel="stylesheet" href="Website_Model.css">
+    <link rel="stylesheet" href="color_theme\\01_Project1.css">
+    <link rel="stylesheet" href="color_theme\\01_Project1.js">
+    <link rel="stylesheet" href="Project4\\04_Project4.css">
+    <link rel="stylesheet" href="Project4\\04_Project4.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+
+    <title>Sourav main Page</title>
+    <script src="color_theme\\01_Project1.js"></script>
+    <script src="Project4\\04_Project4.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#toggleButton").click(function(){
+        $("#side-menu").toggle();
+    });
+    });
+    </script>
+    <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const ALLContenteds = document.querySelector("body");
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            ALLContenteds.style.backgroundColor = 'green';
+        } else {
+            ALLContenteds.style.backgroundColor = 'dark';
+        }
+    });
+
+    </script>
+    <script type="text/javascript">
+        function loadPage(pageName) {
+           const contentDiv = document.getElementById("ALLContents");
+           const xhttp = new XMLHttpRequest();
+           xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                 contentDiv.innerHTML = this.responseText;
+              }
+           };
+           xhttp.open("GET", pageName + ".html", true);
+           xhttp.send();
+        }
+    </script>
+    <script>
+        var modal = document.getElementById("myModal");
+        var live = document.getElementById("live");
+        var span = document.getElementsByClassName("close")[0];
+        
+        live.onclick = function() {
+            modal.style.display = "block";
+            modal.style.backgroundColor = "red";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () { 
+      const Like_Button = document.querySelector(".like-Button");
+      const disLike_Button = document.querySelector(".dislike-Button");
+      const Share_Button = document.querySelector(".share-Button");
+
+      let likeCount = 0;
+      let dislikeCount = 0;
+
+      Like_Button.addEventListener("click", function () {
+          likeCount++;
+          updateCounts();
+      });
+
+      disLike_Button.addEventListener("click", function () {
+          dislikeCount++;
+          updateCounts();
+      });
+
+      Share_Button.addEventListener("click", function () {
+          alert("Shared!");
+      });
+  
+      function updateCounts() {
+        Like_Button.innerHTML = `Like (${likeCount})`;
+        disLike_Button.innerHTML = `Dislike (${dislikeCount})`;
+      }
+    });
+    </script>
+</head>
+<body>
+<div class="topnav">
+    <div class="navpart-1">
+        <button id="toggleButton" class="arrow-button">&equiv;</button>
+        <a href="#home" onclick="loadPage('home')" role="link" aria-label="Home"><i class="fa fa-home" title="Home"></i></a>
+        <a href="Friends_page.html" role="link" aria-label="Friends"><i class="fa fa-user" title="Friends"></i></a>
+        <a href="#Videos"><i class="fa fa-tv" title="Video"></i></a>
+        <a href="#game" onclick="loadPage('Project4\\04_Project4')" role="link" aria-label="Game"><i class="fa fa-gamepad"title="Games"></i></a>
+        <a href="#theme" onclick="loadPage('color_theme\\01_ProjectOne')" role="link" aria-label="Theme"><i class="fa fa-circle" title="Theme"></i></a>
+            <label class="search">
+              <input type="text" placeholder="Search.." name="search">
+              <span type="submit" id="searchlogo"><i class="fa fa-search"></i></span>
+            </label>
+        
+        <label class="navpart-2">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <a href="Website_login_page\bootstrap login_page.html">
+            <button id="login">login</button></a>
+        <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+                <p>hello</p>
+                </div>
+            </div>
+        </label>
+    </div>
+</div>
+
+
+    <div id="side-menu">
+        <div class="menu">
+        <img src="https://cdn-icons-png.freepik.com/256/903/903482.png?semt=ais_hybrid" width="50px" height="40px">&nbsp&nbsp
+        <input type="search" name="search" id="search"placeholder="Search website">
+        <button>Enter</button></div>
+       <div id="ul-toggle">
+        <ul type="none">
+            <li><a href="#sourav">
+                <img src="https://cdn5.vectorstock.com/i/1000x1000/47/84/man-icon-gentleman-logo-a-with-beard-vector-23194784.jpg" width="30px" height="30px">&nbsp&nbsp 
+            Sourav Ghosh</a></li>
+            <li><a href="#friends">
+                <img src="https://c8.alamy.com/comp/GRMFCE/friends-icon-GRMFCE.jpg" width="30px" height="30px">&nbsp&nbsp 
+            Finds friends</a></li>
+            <li><a href="#facebook">
+                <img src="https://cdn-icons-png.freepik.com/256/903/903482.png?semt=ais_hybrid"width="30px" height="30px">&nbsp&nbsp
+            Welcome</a></li>
+            <li><a href="#memories">
+                <img src="https://cdn-icons-png.flaticon.com/512/9192/9192424.png"width="30px" height="30px">&nbsp&nbsp
+            Memories</a></li>
+            <li><a href="#saved">
+                <img src="https://cdn-icons-png.flaticon.com/512/6159/6159728.png" width="30px" height="30px">&nbsp&nbsp
+            Saved</a></li>
+            <li><a href="#video_icon">
+                <img src="https://www.iconpacks.net/icons/2/free-video-play-icon-5876-thumb.png"width="30px" height="30px">&nbsp&nbsp
+            Videos</a></li>
+            <li><a href="#events_icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/780/780575.png"width="30px" height="30px">&nbsp&nbsp
+            Events</a></li>
+            <li><a href="#ads_manager">
+                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/ads-manager-8046764-6483744.png"width="30px" height="30px">&nbsp&nbsp
+            Ads Manager</a></li>
+            <li><a href="#Blood_donation">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOXNGmaHGKEf-YB-PeNfvuR9GDiRZ_tA9PEzWX-HXJQ&s"width="30px" height="30px">&nbsp&nbsp
+            Blood Donations</a></li>
+            <li><a href="#money_pay">
+                <img src="https://cdn-icons-png.freepik.com/256/625/625599.png?semt=ais_hybrid"width="30px" height="30px">&nbsp&nbsp
+            transaction/Pay</a></li>
+            <li><a href="#messanger">
+                <img src="https://icon2.cleanpng.com/20240204/uff/transparent-whatsapp-logo-green-whatsapp-messenger-logo-with-network-1710885926864.webp"width="30px" height="30px">&nbsp&nbsp
+            Messanger</a></li>
+            <li><a href="#Play-Games-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/720/720284.png"width="30px" height="30px">&nbsp&nbsp
+            Play Games</a></li>
+            <li><a href="#recent_ads_activity">
+                <img src="https://cdn.dribbble.com/users/869467/screenshots/2631728/dashboard-intro_recent-activity.gif"width="30px" height="30px">&nbsp&nbsp
+            Recent and Activity</a></li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </div>
+    </div>
+
+    <div id="ALLContents">
+        <div id="container">
+            <p>Group Conversation</p>      
+            <textarea id="message" placeholder="Write a message for for your group"></textarea>
+        </div>
+        <!--  -->
+        
+        <div id="content">
+            <div id="button">
+                <button><img src="https://t4.ftcdn.net/jpg/03/56/17/75/360_F_356177598_bKRrM01JHWdF2sdABU5brZGTt3FqDqKf.jpg" width="25px" height="25px">
+                <a href="#"</a></button>&nbsp&nbsp
+                create story<br>
+                <p>share a photo or write something</p>
+            </div>
+            <div id="part2">
+                <section>
+                    <img src="https://cdn-icons-png.freepik.com/512/146/146031.png" width="25px" height="25px">&nbsp&nbsp
+                <input type="text" placeholder="what's on your mind sourav"><br>
+                <button type="button" id="live"><a href="#">Live Video</a></button>
+                <button type="button" >Photo/Video</button>
+                <button type="button" >Feeling/Activity</button>
+            </div>
+    
+            <div class ="part3">
+                <img src="https://i0.wp.com/www.iedunote.com/img/23559/what-is-a-company-1.jpg" width="500px" height="400px"><br>
+                <div class="button-container">
+                    <button id="likeButton" class="like-Button">Like</button>
+                    <button id="dislikeButton" class="dislike-Button">Dislike</button>
+                    <button id="shareButton" class="share-Button">Share</button>
+                </div>
+            </div>
+            
+        <br>
+    
+            <div class ="part3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyAzsQ2Wsr832iQA0DZN224HPX3yRI50R1OW5fhLOZ_Q&s"  width="500px" height="400px">
+                <div class="button-container">
+                    <button id="likeButton" class="like-Button">Like</button>
+                    <button id="dislikeButton" class="dislike-Button">Dislike</button>
+                    <button id="shareButton" class="share-Button">Share</button>
+                </div>
+            </div><br>
+    
+           <div class ="part3">
+                <img src="https://t3.ftcdn.net/jpg/04/50/78/40/360_F_450784015_o11Svg8GMfVtj3VRtH7EQpSyzpDlCX24.jpg" width="500px" height="400px"><br>
+                <div class="button-container">
+                    <button id="likeButton" class="like-Button">Like</button>
+                    <button id="dislikeButton" class="dislike-Button">Dislike</button>
+                    <button id="shareButton" class="share-Button">Share</button>
+                </div>
+            </div>
+            <br> 
+            <div class ="part3">
+                <img src="https://cxotoday.com/wp-content/uploads/2022/08/github.jpeg"  width="500px" height="400px"><br>
+                <div class="button-container">
+                    <button id="likeButton" class="like-Button">Like</button>
+                    <button id="dislikeButton" class="dislike-Button">Dislike</button>
+                    <button id="shareButton" class="share-Button">Share</button>
+                </div>
+            </div>
+            <br> 
+            <div class ="part3">
+                <img src="https://i.pinimg.com/originals/81/28/a4/8128a49d5f7b10b38d9aa6dd17544198.gif"  width="500px" height="400px"><br>
+                <div class="button-container">
+                    <button id="likeButton" class="like-Button">Like</button>
+                    <button id="dislikeButton" class="dislike-Button">Dislike</button>
+                    <button id="shareButton" class="share-Button">Share</button>
+                </div>
+            </div>
+            <div class ="part3">
+                <img src="https://i.pinimg.com/originals/c8/ca/70/c8ca70f3e9169546b2c67d301aaeef38.gif"  width="500px" height="400px"><br>
+                <div class="button-container">
+                    <button id="likeButton" class="like-Button">Like</button>
+                    <button id="dislikeButton" class="dislike-Button">Dislike</button>
+                    <button id="shareButton" class="share-Button">Share</button>
+                </div>
+            </div>
+            <div class ="part3">
+                <img src="https://i.pinimg.com/236x/8a/06/11/8a0611bcf6eded85c8989359afd398b5.jpg"  width="500px" height="400px"><br>
+                <div class="button-container">
+                    <button id="likeButton" class="like-Button">Like</button>
+                    <button id="dislikeButton" class="dislike-Button">Dislike</button>
+                    <button id="shareButton" class="share-Button">Share</button>
+                </div>
+            </div>
+    
+    
+            <footer>
+                <p>&copy; 2024 Website Home Page</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
